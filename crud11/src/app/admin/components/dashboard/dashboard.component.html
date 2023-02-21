@@ -1,0 +1,5 @@
+<div class="container-fluid">
+    <app-a-header (onToggleAdd)="toggleAdd()"></app-a-header>
+    <app-post-data [posts]="posts" (onDelete)="deletePost($event)" (onEditPost)="editPost($event)"></app-post-data>
+    <app-post-card (onAddPost)="addPost($event)" [postEdit]="postEdit" (onUpdatePost)="updatePost($event)" [showAdd]="showAdd"></app-post-card>
+</div>

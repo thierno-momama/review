@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: green;
+
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+fa-icon{
+    font-size: 2em;
+}

@@ -1,0 +1,11 @@
+header{
+    background: green;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}

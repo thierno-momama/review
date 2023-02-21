@@ -1,0 +1,7 @@
+<app-add-pet (onAddpet)="addpet($event)"></app-add-pet>
+<mat-grid-list cols="3" rowHeight="700">
+    <mat-grid-tile *ngFor="let pet of pets">
+        <app-pet-item [pet]="pet" (onFavorite)="favorite(pet)"  (onDeletePet)="deletePet(pet)"></app-pet-item>
+    </mat-grid-tile>
+</mat-grid-list>
+  

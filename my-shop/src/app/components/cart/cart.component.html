@@ -1,0 +1,8 @@
+<div>
+    <h2>Cart<span *ngIf="cards.length > 1">s</span></h2>
+    <a routerLink="/shipping">Shipping</a>
+    <div class="card" *ngFor="let card of cards">
+        <h3>{{ card.name }}</h3>
+        <p>{{ card.price }}</p>
+    </div>
+</div>

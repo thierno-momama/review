@@ -1,0 +1,5 @@
+<div class="container" *ngFor="let product of productLists">
+    <app-product-card  [product]="product"></app-product-card>
+    <app-product-alerts (onShare)="share(product)"></app-product-alerts>
+    <app-product-notify [product]="product" (onNotify)="notify(product)"></app-product-notify>
+</div>

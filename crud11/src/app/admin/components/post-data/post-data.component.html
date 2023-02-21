@@ -1,0 +1,20 @@
+<div class="row mt-5">
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Update</th>
+                <th scope="col">DELETE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let post of postData; let i = index">
+                <td >{{ post.title }}</td>
+                <td><a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"  (click)="onEdit(post)">Update</a></td>
+                <td><a class="btn btn-danger" (click)="onDelete.emit(post)">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

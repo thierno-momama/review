@@ -1,0 +1,30 @@
+<div class="row mt-5">
+    <div class="card mt-5 p-5">
+        <h1>Registration</h1>
+        <form [formGroup]="formSignup" (ngSubmit)="onSignUp()">
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="email" formControlName="fullName" class="form-control" id="fullName">
+              <div class="alert alert-danger mt-2" *ngIf="FullName?.touched && FullName?.invalid">
+                <div *ngIf="FullName.errors?.['required']">Full Name Required....</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" formControlName="email" class="form-control" id="email">
+              <div class="alert alert-danger mt-2" *ngIf="Email?.touched && Email?.invalid">
+                <div *ngIf="Email.errors?.['required']">Email Required....</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control" id="password">
+              <div class="alert alert-danger mt-2" *ngIf="Password?.touched && Password?.invalid">
+                <div *ngIf="Password.errors?.['required']">Password Required....</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="formSignup.invalid">Sign Up</button>
+        </form>
+        <p class="mt-5">If you have account <a routerLink="/"> Click Here</a></p>
+    </div>
+</div>
